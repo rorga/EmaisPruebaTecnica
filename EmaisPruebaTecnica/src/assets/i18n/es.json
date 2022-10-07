@@ -3,7 +3,8 @@
         "TITLE": "Página principal",
         "SEARCH-BAR": {
             "PLACEHOLDER": "Buscar películas"
-        }
+        },
+        "MOVIES_FOUND": "Películas encontradas: "
     },
     "FAVORITES-PAGE": {
         "TITLE": "Películas favoritas"

@@ -3,7 +3,8 @@
         "TITLE": "Home page",
         "SEARCH-BAR": {
             "PLACEHOLDER": "Search films"
-        }
+        },
+        "MOVIES_FOUND": "Movies found: "
     },
     "FAVORITES-PAGE": {
         "TITLE": "Favorite films"

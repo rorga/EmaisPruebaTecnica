@@ -4,13 +4,18 @@
             <p>{{ 'MAIN-PAGE.TITLE' | translate}}</p>
         </div>
         <div class="search_bar">
-            <input type="text" class="searchFilm" placeholder="{{ 'MAIN-PAGE.SEARCH-BAR.PLACEHOLDER' | translate}}">
-            <button class="searchButton" matSuffix mat-button><mat-icon >search</mat-icon></button>    
+            <input type="text" #movie id="movie" name="movie" class="searchFilm" (keydown.enter)="getMovies(movie.value)" placeholder="{{ 'MAIN-PAGE.SEARCH-BAR.PLACEHOLDER' | translate}}">
+            <button class="searchButton" (click)="getMovies(movie.value)" matSuffix mat-button><mat-icon >search</mat-icon></button>    
         </div>
     </div>
-    <div class="movies_container">
+    <div *ngIf="moviesFromSearch" class="total_registers">
+        <p>{{ 'MAIN-PAGE.MOVIES_FOUND' | translate}} </p>
+        <p>{{totalRegisters}}</p>
+    </div>
+    <div *ngIf="moviesFromSearch" class="movies_container">
         <div class="cards_container">
-            <app-movie-card></app-movie-card>
+
+            <app-movie-card *ngFor="let movie of moviesFromSearch?.results" [title]="movie.title" [launchDate]="movie.release_date" [poster]="getPoster(movie.poster_path)"></app-movie-card>
         </div>
     </div>
 </div>
