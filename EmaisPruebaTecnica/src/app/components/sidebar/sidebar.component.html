@@ -1,0 +1,3 @@
+<div class="sidebar_container">
+    <button *ngFor="let item of buttons" [ngClass]="{'active' : item.active}" (click)="checkButton(item)" mat-raised-button color="warn">{{ item.label | translate}}</button>
+</div>

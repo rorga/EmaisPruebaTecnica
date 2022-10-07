@@ -1,0 +1,15 @@
+.sidebar_container {
+    display: flex;
+    flex-direction: column;
+    button{
+        margin: 8px;
+        padding: 8px;
+        background: var(--tertiary);
+        border-radius: 8px;
+        cursor: pointer;
+        &.active {
+            background-color: #f44336;
+        }
+    }
+}
+

@@ -1,0 +1,11 @@
+{
+    "MAIN-PAGE": {
+        "TITLE": "Home page"
+    },
+    "SIDEBAR": {
+        "BUTTONS": {
+            "HOME": "Home",
+            "FAVORITES": "Favorites"
+        }
+    }
+}

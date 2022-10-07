@@ -1,0 +1,4 @@
+export enum ButtonsEnum {
+    HOME = 'SIDEBAR.BUTTONS.HOME',
+    FAVORITES = 'SIDEBAR.BUTTONS.FAVORITES'
+}
