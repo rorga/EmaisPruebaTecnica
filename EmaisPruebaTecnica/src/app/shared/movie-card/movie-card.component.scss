@@ -1,0 +1,49 @@
+.card_container {
+    padding: 16px;
+}
+
+.mat-card {
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    background: var(--quaternary);
+    width: 200px;
+
+    .mat-card-title{
+        font-size: 16px;
+    }
+    .mat-icon {
+        float: right;
+        background: goldenrod;
+        border-radius: 16px;
+        margin: 8px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: yellow;
+        }
+    }
+}
+
+.mat-card-content {
+    .title {
+        label:nth-of-type(1) {
+            color: black;
+            font-weight: bold;
+        }
+
+        label:nth-of-type(2) {
+            color: blue;
+        }
+    }
+
+    .launchDate {
+        label:nth-of-type(1) {
+            color: black;
+            font-weight: bold;
+        }
+
+        label:nth-of-type(2) {
+            color: blue;
+        }
+    }
+}

@@ -6,5 +6,5 @@
     --quaternary: #4699FF;
   }
 
-html, body { height: 100%; }
+html, body { height: 100%; display: flex; flex-direction: column; width: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

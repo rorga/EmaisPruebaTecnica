@@ -1,11 +1,21 @@
 {
     "MAIN-PAGE": {
-        "TITLE": "Página principal"
+        "TITLE": "Página principal",
+        "SEARCH-BAR": {
+            "PLACEHOLDER": "Buscar películas"
+        }
+    },
+    "FAVORITES-PAGE": {
+        "TITLE": "Películas favoritas"
     },
     "SIDEBAR": {
         "BUTTONS": {
             "HOME": "Inicio",
             "FAVORITES": "Favoritos"
         }
+    },
+    "CARDS": {
+        "LABEL_TITLE": "Título:",
+        "LABEL_RELEASE_DATE": "Fecha de lanzamiento:"
     }
 }

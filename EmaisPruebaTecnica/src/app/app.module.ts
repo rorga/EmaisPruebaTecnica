@@ -11,16 +11,21 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FavoritesPageComponent } from './components/favorites-page/favorites-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatButtonModule } from '@angular/material/button';
-
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import { MovieCardComponent } from './shared/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     SidebarComponent,
-    FavoritesPageComponent
+    FavoritesPageComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +39,15 @@ import { MatButtonModule } from '@angular/material/button';
             }
         }),
         BrowserAnimationsModule,
-        MatButtonModule
-        
-        
+
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatCardModule
+  ],
+  exports: [
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

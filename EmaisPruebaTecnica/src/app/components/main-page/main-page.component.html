@@ -4,13 +4,13 @@
             <p>{{ 'MAIN-PAGE.TITLE' | translate}}</p>
         </div>
         <div class="search_bar">
-            <div class="container-1">
-                <span class="icon">
-                    <i>
-
-                    </i>
-                </span>
-            </div>
+            <input type="text" class="searchFilm" placeholder="{{ 'MAIN-PAGE.SEARCH-BAR.PLACEHOLDER' | translate}}">
+            <button class="searchButton" matSuffix mat-button><mat-icon >search</mat-icon></button>    
+        </div>
+    </div>
+    <div class="movies_container">
+        <div class="cards_container">
+            <app-movie-card></app-movie-card>
         </div>
     </div>
 </div>

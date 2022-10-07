@@ -1,0 +1,21 @@
+
+  <div class="card_container">
+    <mat-card >
+ <mat-icon mat-icon>add</mat-icon>
+      <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="poster">
+      <mat-card-content>
+        <div class="title">
+            <label>{{'CARDS.LABEL_TITLE' | translate}}</label>
+            <label>{{title}}</label>
+        </div>
+        <div class="launchDate">
+            <label>{{'CARDS.LABEL_RELEASE_DATE' | translate}}</label>
+            <label>{{launchDate}}</label>
+        </div>
+      </mat-card-content>
+      <p class="value_launchDate"></p>
+    </mat-card>
+  </div>
