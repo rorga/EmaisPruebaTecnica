@@ -7,14 +7,11 @@ import { AppModule } from '../app.module';
 
 @NgModule({
   declarations: [
-    MovieCardComponent
   ],
   imports: [
-    CommonModule,
-    AppModule
+    CommonModule
   ],
   exports: [
-    MovieCardComponent
   ]
 })
 export class SharedModule { }

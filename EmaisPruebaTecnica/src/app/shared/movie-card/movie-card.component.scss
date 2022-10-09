@@ -16,12 +16,14 @@
     .mat-icon {
         float: right;
         background: goldenrod;
+        color: yellow;
         border-radius: 16px;
         margin: 8px;
         cursor: pointer;
 
         &:hover {
             background-color: yellow;
+            color: black;
         }
     }
 }

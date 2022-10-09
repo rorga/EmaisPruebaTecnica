@@ -1,4 +1,4 @@
 export interface ButtonModel {
-    label: string,
-    active: boolean
+    label: string;
+    active: boolean;
 }

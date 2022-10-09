@@ -2,4 +2,10 @@
     <div class="title">
         <p>{{ 'FAVORITES-PAGE.TITLE' | translate}}</p>
     </div>
+    <div *ngIf="formatedFavoriteMovies" class="movies_container">
+        <div class="cards_container">
+
+            <app-movie-card *ngFor="let movie of formatedFavoriteMovies" [title]="movie.title" [launchDate]="movie.launchDate" [poster]="movie.poster" ></app-movie-card>
+        </div>
+    </div>
 </div>

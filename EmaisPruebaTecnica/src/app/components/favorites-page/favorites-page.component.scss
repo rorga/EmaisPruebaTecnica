@@ -7,4 +7,22 @@
         padding: 24px;
         color: white;
     }
+
+    .movies_container{
+        min-height: 100%;
+        position: relative;
+        .cards_container{
+            display: flex;
+            flex-wrap: wrap;
+            background: honeydew;
+            min-width: 1000;
+            margin: 0px 24px 24px 24px;
+            padding: 32px;
+            border-radius: 16px;
+            position: relative;
+            overflow: auto;
+            max-height: 680px!important;
+
+        }
+    }
 }
