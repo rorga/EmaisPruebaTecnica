@@ -15,8 +15,10 @@ export class MainPageComponent implements OnInit {
   moviesFromSearch?: Movies;
   totalRegisters?: number;
 
+  movies: any;
+
   ngOnInit(): void {
-    localStorage.getItem('movies');
+    this.movies = localStorage.getItem('movies');
   }
 
   /**
@@ -48,8 +50,14 @@ export class MainPageComponent implements OnInit {
    * @param receivedMovie Película recibida de la emision de la CARD.
    */
   addToFavorites(receivedMovie: FavoriteMovie){
-    let temporalReceiveMovies: any = localStorage.getItem('movies');
-    let temporalFormatedMovies: FavoriteMovie[] = JSON.parse(temporalReceiveMovies);
+    let temporalReceiveMovies: any;
+    let temporalFormatedMovies: FavoriteMovie[] = [];
+    if(localStorage.getItem('movies')){
+      temporalReceiveMovies =  localStorage.getItem('movies');
+      temporalFormatedMovies = JSON.parse(temporalReceiveMovies);
+    }else{
+      temporalReceiveMovies = [];
+    }
     temporalFormatedMovies.push({title: receivedMovie.title, launchDate: receivedMovie.launchDate, poster: receivedMovie.poster});
     localStorage.setItem('movies', JSON.stringify(temporalFormatedMovies));
   }

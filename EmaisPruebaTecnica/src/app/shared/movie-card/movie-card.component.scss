@@ -7,14 +7,30 @@
     border-radius: 8px;
     background: var(--quaternary);
     width: 261px;
-    min-height: 424px;
     max-height: 552px;
 
-    .mat-card-title{
+    .mat-card-image {
+        min-height: 439px;
+    }
+
+    .mat-card-header {
+        display: flex;
+        height: 48px;
+        align-items: center;
+        justify-content: space-between;
+
+        ::ng-deep .mat-card-header-text {
+            width: 70%;
+        }
+    }
+
+
+
+    .mat-card-title {
         font-size: 16px;
     }
+
     .mat-icon {
-        float: right;
         background: goldenrod;
         color: yellow;
         border-radius: 16px;
@@ -48,6 +64,31 @@
 
         label:nth-of-type(2) {
             color: blue;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .mat-card {
+        width: 172px;
+        max-height: none;
+
+        .mat-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mat-card-header-text {
+            padding: 0px;
+        }
+
+        .mat-card-title {
+            font-size: 16px;
+        }
+
+        .mat-card-image {
+            width: 205px;
         }
     }
 }

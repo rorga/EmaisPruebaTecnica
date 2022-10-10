@@ -1,11 +1,11 @@
 .app_container {
     display: flex;
     .sidebar_container{
-        width: 8%;
+        width: 100px;
         background-color: var(--secondary);
     }
     .router_container{
-        width: 92%;
         background-color: var(--primary);
+        width: 100%;
     }
 }
