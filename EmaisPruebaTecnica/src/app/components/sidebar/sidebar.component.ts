@@ -18,6 +18,10 @@ export class SidebarComponent implements OnInit {
     this.buttons[0].active = true;
   }
 
+  /**
+   * Método para controlar el botón activo
+   * @param event Párametro para comprobar la label del botón
+   */
   checkButton(event: any){
     if(event.label === ButtonsEnum.HOME){
       this.buttons[0].active = true;
@@ -30,10 +34,16 @@ export class SidebarComponent implements OnInit {
     }
   }
 
+  /**
+   * Método que te lleva a la ruta de favoritos
+   */
   navigateToFavorites(){
     this._router.navigate(['favorites'])
   }
 
+  /**
+   * Método que te lleva a la ruta principal
+   */
   navigateToHome(){
     this._router.navigate([''])
   }

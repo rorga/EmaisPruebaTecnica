@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser'
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,47 +12,37 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FavoritesPageComponent } from './components/favorites-page/favorites-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatButtonModule } from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
-import { MovieCardComponent } from './shared/movie-card/movie-card.component';
-
+import { DetailsComponent } from './components/details/details.component';
+import { MaterialModule } from './material/material.module';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     SidebarComponent,
     FavoritesPageComponent,
-    MovieCardComponent
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        BrowserAnimationsModule,
-
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
-        MatCardModule
+    SharedModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
-  exports: [
-    MatCardModule
-  ],
+  exports: [],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }

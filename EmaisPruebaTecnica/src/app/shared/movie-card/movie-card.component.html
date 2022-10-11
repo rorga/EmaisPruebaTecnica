@@ -4,6 +4,7 @@
       <mat-card-header>
         <mat-card-title>{{title}}</mat-card-title>
         <mat-icon mat-icon (click)="emitMovie()">star</mat-icon>
+        <mat-icon mat-icon (click)="seeMovieDetails()">visibility</mat-icon>
       </mat-card-header>
       <img mat-card-image [src]="poster">
       <mat-card-content>
@@ -16,6 +17,5 @@
             <label>{{launchDate}}</label>
         </div>
       </mat-card-content>
-      <p class="value_launchDate"></p>
     </mat-card>
   </div>

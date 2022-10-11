@@ -10,7 +10,7 @@ import { Movies } from '../../models/movies';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor(private _moviesService: MoviesService) { }
+  constructor(private _moviesService: MoviesService,) { }
 
   moviesFromSearch?: Movies;
   totalRegisters?: number;
@@ -58,8 +58,10 @@ export class MainPageComponent implements OnInit {
     }else{
       temporalReceiveMovies = [];
     }
-    temporalFormatedMovies.push({title: receivedMovie.title, launchDate: receivedMovie.launchDate, poster: receivedMovie.poster});
+    temporalFormatedMovies.push({title: receivedMovie.title, launchDate: receivedMovie.launchDate, poster: receivedMovie.poster, overview: receivedMovie.overview, vote_average: receivedMovie.vote_average});
     localStorage.setItem('movies', JSON.stringify(temporalFormatedMovies));
   }
+
+
 
 }

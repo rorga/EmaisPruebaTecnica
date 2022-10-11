@@ -20,7 +20,7 @@
         justify-content: space-between;
 
         ::ng-deep .mat-card-header-text {
-            width: 70%;
+            width: 57%;
         }
     }
 
@@ -36,11 +36,12 @@
         border-radius: 16px;
         margin: 8px;
         cursor: pointer;
-
+        border: 1px solid black;
         &:hover {
             background-color: yellow;
             color: black;
         }
+        
     }
 }
 
