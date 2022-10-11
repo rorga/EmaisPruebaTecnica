@@ -31,16 +31,21 @@
     }
 
     .mat-icon {
-        background: goldenrod;
-        color: yellow;
+
         border-radius: 16px;
-        margin: 8px;
-        cursor: pointer;
-        border: 1px solid black;
-        &:hover {
-            background-color: yellow;
-            color: black;
-        }
+            margin: 8px;
+            cursor: pointer;
+            border: 1px solid black;
+        
+            &.favorite {
+                background: goldenrod;
+                color: yellow;
+            }
+        
+            &:hover {
+                background-color: yellow;
+                color: black;
+            }
         
     }
 }
@@ -70,9 +75,12 @@
 }
 
 @media screen and (max-width: 425px) {
+
+    :host {
+        width: 100%;
+    }
     .mat-card {
-        width: 172px;
-        max-height: none;
+        width: unset;
 
         .mat-card-header {
             display: flex;
@@ -86,10 +94,6 @@
 
         .mat-card-title {
             font-size: 16px;
-        }
-
-        .mat-card-image {
-            width: 205px;
         }
     }
 }

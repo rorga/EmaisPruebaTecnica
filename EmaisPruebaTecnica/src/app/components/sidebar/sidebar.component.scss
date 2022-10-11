@@ -13,3 +13,11 @@
     }
 }
 
+@media screen and (max-width: 425px) {
+    .sidebar_container {
+        flex-direction: row;
+        button {
+            flex-grow: 1;
+        }
+    }
+}

@@ -11,10 +11,11 @@ export class DetailsComponent implements OnInit {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: {title: string, launchDate: string, poster: string, overview: string, vote_average: number, original_language: string}) { }
   
-  movies: FavoriteMovie[] = [];
+  movies?: FavoriteMovie;
 
   ngOnInit(): void {
-    this.movies.push(this.data)
+    console.log(this.data);
+    this.movies = this.data;
   }
 
 }

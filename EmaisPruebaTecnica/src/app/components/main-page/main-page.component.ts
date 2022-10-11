@@ -2,7 +2,7 @@ import { Poster } from './../../enums/general-enums';
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies-service/movies.service';
 import { FavoriteMovie } from '../../models/favorites';
-import { Movies } from '../../models/movies';
+import { Movies, Result } from '../../models/movies';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -26,10 +26,13 @@ export class MainPageComponent implements OnInit {
    * @param movieToSearch Recibimos lo que hemos escrito en el Input de la barra de búsqueda.
    */
   getMovies(movieToSearch: string){
-    this._moviesService.getMoviesByTitle(movieToSearch).subscribe( (data: Movies) => {
-      this.totalRegisters = data.total_results;
-      this.moviesFromSearch = data;
-    });
+    if(movieToSearch){
+      this._moviesService.getMoviesByTitle(movieToSearch).subscribe( (data: Movies) => {
+        this.totalRegisters = data.total_results;
+        this.moviesFromSearch = data;
+        this.moviesFromSearch.results = this.moviesFromSearch.results.map( result => ({...result, isFavorite: this._moviesService.isFavoriteMovie(result)}))
+      });
+    }
   }
   
   /**
@@ -46,21 +49,21 @@ export class MainPageComponent implements OnInit {
   }
 
   /**
-   * Método para añadir en el localStorage las películas que queramos añadir a la página de Favoritos.
-   * @param receivedMovie Película recibida de la emision de la CARD.
+   * Método para añadir o eliminar peliculas
+   * @param event Pelicula
    */
-  addToFavorites(receivedMovie: FavoriteMovie){
-    let temporalReceiveMovies: any;
-    let temporalFormatedMovies: FavoriteMovie[] = [];
-    if(localStorage.getItem('movies')){
-      temporalReceiveMovies =  localStorage.getItem('movies');
-      temporalFormatedMovies = JSON.parse(temporalReceiveMovies);
+  favoriteClick(event: Result){
+    const movie = this.moviesFromSearch?.results.find( movie => movie.title === event.title)!;
+    if(event.isFavorite){
+      movie.isFavorite = false;
+      this._moviesService.deleteFromFavorites(event as any);
     }else{
-      temporalReceiveMovies = [];
+      movie.isFavorite = true;
+      this._moviesService.addToFavorites(event as any);
     }
-    temporalFormatedMovies.push({title: receivedMovie.title, launchDate: receivedMovie.launchDate, poster: receivedMovie.poster, overview: receivedMovie.overview, vote_average: receivedMovie.vote_average});
-    localStorage.setItem('movies', JSON.stringify(temporalFormatedMovies));
   }
+
+
 
 
 

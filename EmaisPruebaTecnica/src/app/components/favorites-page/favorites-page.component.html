@@ -4,8 +4,7 @@
     </div>
     <div *ngIf="formatedFavoriteMovies" class="movies_container">
         <div class="cards_container">
-
-            <app-movie-card *ngFor="let movie of formatedFavoriteMovies" [title]="movie.title" [launchDate]="movie.launchDate" [poster]="movie.poster" ></app-movie-card>
+            <app-movie-card *ngFor="let movie of formatedFavoriteMovies" [title]="movie.title" [launchDate]="movie.launchDate" [poster]="movie.poster" [isFavorite]="true" (sendMovie)="deleteMovie($event)" [overview]="movie.overview" [vote_average]="movie.vote_average"></app-movie-card>
         </div>
     </div>
 </div>

@@ -15,7 +15,7 @@
     <div *ngIf="moviesFromSearch" class="movies_container">
         <div class="cards_container">
 
-            <app-movie-card *ngFor="let movie of moviesFromSearch.results" [title]="movie.title" [launchDate]="movie.release_date" [poster]="getPoster(movie.poster_path)" [overview]="movie.overview" [vote_average]="movie.vote_average" (sendMovie)="addToFavorites($event)" ></app-movie-card>
+            <app-movie-card *ngFor="let movie of moviesFromSearch.results" [title]="movie.title" [launchDate]="movie.release_date" [poster]="getPoster(movie.poster_path)" [overview]="movie.overview" [vote_average]="movie.vote_average" (sendMovie)="favoriteClick($event)" [isFavorite]="movie.isFavorite" ></app-movie-card>
         </div>
     </div>
 </div>

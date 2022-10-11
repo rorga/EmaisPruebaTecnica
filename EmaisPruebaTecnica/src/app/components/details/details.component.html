@@ -1,12 +1,10 @@
-
-
-<h1 mat-dialog-title>Favorite Animal</h1>
+<h1 mat-dialog-title>Detalles</h1>
 <div mat-dialog-content>
-    <div *ngFor="let item of movies" class="details_container">
-        <label>{{item.title}}</label>
-        <label>{{item.launchDate}}</label>
-        <label>{{item.poster}}</label>
-        <label>{{item.vote_average}}</label>
-        <label>{{item.overview}}</label>
+    <div class="details_container">
+        <label>{{data.title}}</label>
+        <img mat-card-image [src]="data.poster">
+        <label>{{data.launchDate}}</label>
+        <label>{{data.vote_average}}</label>
+        <label>{{data.overview}}</label>
     </div>
 </div>

@@ -3,7 +3,7 @@
     <mat-card >
       <mat-card-header>
         <mat-card-title>{{title}}</mat-card-title>
-        <mat-icon mat-icon (click)="emitMovie()">star</mat-icon>
+        <mat-icon mat-icon [class.favorite]="isFavorite" (click)="emitMovie()">{{isFavorite ? "star" : "star_half"}}</mat-icon>
         <mat-icon mat-icon (click)="seeMovieDetails()">visibility</mat-icon>
       </mat-card-header>
       <img mat-card-image [src]="poster">

@@ -13,6 +13,7 @@ export interface Result {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  isFavorite?: boolean;
 }
 
 export interface Movies {
