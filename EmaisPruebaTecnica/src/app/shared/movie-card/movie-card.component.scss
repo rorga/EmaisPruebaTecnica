@@ -18,10 +18,6 @@
         height: 48px;
         align-items: center;
         justify-content: space-between;
-
-        ::ng-deep .mat-card-header-text {
-            width: 57%;
-        }
     }
 
 
@@ -58,7 +54,8 @@
         }
 
         label:nth-of-type(2) {
-            color: blue;
+            color: white;
+            padding-left: 8px;
         }
     }
 
@@ -69,18 +66,19 @@
         }
 
         label:nth-of-type(2) {
-            color: blue;
+            color: white;
+            padding-left: 8px;
         }
     }
 }
 
 @media screen and (max-width: 425px) {
-
     :host {
         width: 100%;
     }
     .mat-card {
         width: unset;
+        min-height: 608px;
 
         .mat-card-header {
             display: flex;
@@ -95,5 +93,19 @@
         .mat-card-title {
             font-size: 16px;
         }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .mat-card {
+        width: unset;
+        min-height: 540px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .mat-card {
+        width: unset;
+        min-height: 580px;
     }
 }

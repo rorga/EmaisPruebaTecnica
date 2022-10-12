@@ -1,0 +1,86 @@
+h1 {
+    font-weight: bold;
+}
+
+.details_container {
+    display: flex;
+    justify-content: flex-end;
+
+    .left_details {
+        padding-right: 16px;
+    }
+
+    .mat-divider {
+        margin: 0px 8px 0px 8px;
+    }
+
+    .right_details {
+        .launchDate {
+            display: flex;
+            flex-direction: row;
+
+            label {
+                color: white;
+                padding-left: 8px;
+            }
+
+            p {
+                color: black;
+                font-weight: bold;
+            }
+        }
+
+        .overview {
+            display: flex;
+            flex-direction: row;
+
+            label {
+                color: white;
+                padding-left: 8px;
+            }
+
+            p {
+                color: black;
+                font-weight: bold;
+            }
+        }
+
+        .voteAverage {
+            display: flex;
+            flex-direction: row;
+
+            p {
+                color: black;
+                font-weight: bold;
+            }
+
+            label {
+                color: white;
+                padding-left: 8px;
+            }
+        }
+    }
+
+    .mat-card-image {
+        width: 200px;
+        margin-top: 8px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .details_container {
+        display: unset;
+
+        .left_details {
+            display: flex;
+            justify-content: center;
+        }
+
+        .right_details {
+            .launchDate {
+                width: 100px;
+            }
+        }
+    }
+}

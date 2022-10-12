@@ -14,7 +14,6 @@ export class DetailsComponent implements OnInit {
   movies?: FavoriteMovie;
 
   ngOnInit(): void {
-    console.log(this.data);
     this.movies = this.data;
   }
 

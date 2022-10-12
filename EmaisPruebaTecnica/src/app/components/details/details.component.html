@@ -1,10 +1,25 @@
-<h1 mat-dialog-title>Detalles</h1>
+<h1 mat-dialog-title>{{data.title}}</h1>
+<mat-divider></mat-divider>
 <div mat-dialog-content>
     <div class="details_container">
-        <label>{{data.title}}</label>
-        <img mat-card-image [src]="data.poster">
-        <label>{{data.launchDate}}</label>
-        <label>{{data.vote_average}}</label>
-        <label>{{data.overview}}</label>
+        <div class="left_details">
+            <img mat-card-image [src]="data.poster">
+        </div>
+        <mat-divider [vertical]="true"></mat-divider>
+        <div class="right_details">
+
+            <div class="launchDate">
+                <p>{{'CARDS.LABEL_RELEASE_DATE' | translate}}</p>
+                <label>{{data.launchDate}}</label>
+            </div>
+            <div class="voteAverage">
+                <p>{{'CARDS.LABEL_VOTE_AVERAGE' | translate}} </p>
+                <label>{{data.vote_average}}</label>
+            </div>
+            <div class="overview">
+                <p>{{'CARDS.LABEL_OVERVIEW' | translate}}</p>
+                <label>{{data.overview}}</label>
+            </div>
+        </div>
     </div>
 </div>

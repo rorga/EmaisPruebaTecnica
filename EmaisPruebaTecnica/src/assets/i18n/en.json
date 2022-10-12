@@ -16,7 +16,9 @@
         }
     },
     "CARDS": {
-        "LABEL_TITLE": "Title:",
-        "LABEL_RELEASE_DATE": "Release date:"
+        "LABEL_TITLE": "Title: ",
+        "LABEL_RELEASE_DATE": "Release date: ",
+        "LABEL_OVERVIEW": "Overview: ",
+        "LABEL_VOTE_AVERAGE": "Vote average: "
     }
 }

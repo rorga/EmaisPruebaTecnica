@@ -1,10 +1,37 @@
-
 :root {
-    --primary: #112640;
-    --secondary: #224C80;
-    --tertiary: #3472BF;
-    --quaternary: #4699FF;
+  --primary: #112640;
+  --secondary: #224C80;
+  --tertiary: #3472BF;
+  --quaternary: #4699FF;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.mat-dialog-container {
+  background-color: var(--quaternary);
+  padding: 24px 24px 0px 24px;
+}
+
+app-movie-card {
+  .mat-card-header-text {
+    width: 57%;
   }
 
-html, body { height: 100%; display: flex; flex-direction: column; width: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  @media screen and (max-width: 425px) {
+    .mat-card-header-text {
+      width: 43%;
+    }
+  }
+}

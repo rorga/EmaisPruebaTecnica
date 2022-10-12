@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatDividerModule } from '@angular/material/divider';
 
 const imports = [
   MatButtonModule,
@@ -16,6 +17,7 @@ const imports = [
   MatCardModule,
   MatDialogModule,
   TranslateModule,
+  MatDividerModule
 ];
 
 @NgModule({
