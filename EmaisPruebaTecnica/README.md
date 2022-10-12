@@ -1,27 +1,44 @@
-# EmaisPruebaTecnica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+# Prueba Técnica  EMAIS - Raúl Orga
 
-## Development server
+Proyecto realizado como prueba técnica para la empresa EMAIS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Consiste en realizar una pequeña aplicación web en la que se mostrará un listado 
+de películas con su póster, título y fecha de estreno.
 
-## Code scaffolding
+Además, cada ítem tendrá asociado un botón de “Favoritos” para agregar/desagregar a una lista de películas favoritas.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Framework
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+El proyecto ha sido desarrollado con ANGULAR y TypeScript, ya que es el Framework con el
+que más experiencia tengo y mejor me desenvuelvo.
+## Referencias de Colores y Diseño
 
-## Running unit tests
+He usado estos colores, ya que el azul es uno de mis colores favoritos además de que representa
+seriedad y equilibrio.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Color primario    | ![#112640](https://via.placeholder.com/10/112640?text=+) #112640 |
+| Color secundario  | ![#224C80](https://via.placeholder.com/10/224C80?text=+) #224C80 |
+| Color terciario   | ![#3472BF](https://via.placeholder.com/10/3472BF?text=+) #3472BF |
+| Color cuaternario | ![#4699FF](https://via.placeholder.com/10/4699FF?text=+) #4699FF |
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Librerías usadas
 
-## Further help
+He usado Angular Material, ya que es una librería de componentes web de las más establecidas
+y usadas a día de hoy además de ser bastante versátil y tener multitud de documentación disponible.
+## Referencias de las APIs
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Get all items
+
+```http
+  GET /search/movie?api_key=${api_key}&query=${busqueda}
+```
+
+| Parameter | Type      | Description                 |
+| :-------- |  :------- | :------------------------- |
+| `api_key` |  `string` | Api_key que se nos proporciona.|
+| `busqueda`| `string`  | Película a buscar |
