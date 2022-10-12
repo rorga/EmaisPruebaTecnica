@@ -20,10 +20,10 @@ seriedad y equilibrio.
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Color primario    | ![#112640](https://via.placeholder.com/10/112640?text=+) #112640 |
-| Color secundario  | ![#224C80](https://via.placeholder.com/10/224C80?text=+) #224C80 |
-| Color terciario   | ![#3472BF](https://via.placeholder.com/10/3472BF?text=+) #3472BF |
-| Color cuaternario | ![#4699FF](https://via.placeholder.com/10/4699FF?text=+) #4699FF |
+| Color primario    | #112640 |
+| Color secundario  | #224C80 |
+| Color terciario   | #3472BF |
+| Color cuaternario | #4699FF |
 
 
 ## Librerías usadas
