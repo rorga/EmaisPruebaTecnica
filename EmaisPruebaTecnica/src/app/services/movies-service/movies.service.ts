@@ -54,8 +54,11 @@ export class MoviesService {
      * @returns 
      */
     isFavoriteMovie(movie: Result){
+      let movieFound: FavoriteMovie | undefined;
       const actualMovies: FavoriteMovie[] = JSON.parse(localStorage.getItem('movies')!);
-      const movieFound = actualMovies.find( actualMovie => actualMovie.title === movie.title);
+      if(actualMovies){
+        movieFound = actualMovies.find( actualMovie => actualMovie.title === movie.title);
+      }
       return Boolean (movieFound);
     }
 
